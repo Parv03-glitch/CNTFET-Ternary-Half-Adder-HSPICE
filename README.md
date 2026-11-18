@@ -2,7 +2,7 @@
 
 HSPICE design and simulation of a ternary half adder (logic levels 0, 1, 2) built from carbon nanotube FETs (CNTFETs) with a 10 nm gate length. The design uses a two-output ternary-to-binary decoder, binary Sum/Carry logic, and encoders that convert back to ternary. It follows the approach of Sahoo et al. [1], implemented and simulated here with the Stanford virtual-source CNTFET model.
 
-![Full ternary half adder simulation](waveforms/10_full_adder.png)
+![Full ternary half adder simulation](waveforms/final.png)
 
 ## Highlights
 
@@ -64,7 +64,7 @@ B ─► Decoder ─┘                 ├─► Sum2 ─┘
 | 1 | 0 | 2 |
 | 2 | 2 | 2 |
 
-![Decoder circuit](schematics/decoder.png)
+![Decoder circuit](TtB.png)
 
 **Sum logic**
 
@@ -100,21 +100,21 @@ Note: the Stanford model files are not included in this repo. Download them from
 
 | Decoder A | Decoder B |
 |-----------|-----------|
-| ![Decoder A](waveforms/04_decoder_a.png) | ![Decoder B](waveforms/05_decoder_b.png) |
+| ![Decoder A](waveforms/ternaryTobinary_A.png) | ![Decoder B](waveforms/ternaryTobinary_B.png) |
 
 | Sum1 | Sum2 |
 |------|------|
-| ![Sum1](waveforms/06_sum1.png) | ![Sum2](waveforms/07_sum2.png) |
+| ![Sum1](waveforms/sum1.png) | ![Sum2](waveforms/sum2.png) |
 
 | Sum encoder | Middle carry |
 |-------------|--------------|
-| ![Sum encoder](waveforms/08_sum_encoder.png) | ![Middle carry](waveforms/09_middle_carry.png) |
+| ![Sum encoder](waveforms/sum_encoder.png) | ![Middle carry](waveforms/middle_carry.png) |
 
 ### Full circuit
 
 Inputs step through all nine combinations, 1 ns each. Sum and Carry match the truth table in every interval.
 
-![Full half adder](waveforms/10_full_adder.png)
+![Full half adder](waveforms/final.png)
 
 ### Performance
 
